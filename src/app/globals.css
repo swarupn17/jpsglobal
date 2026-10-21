@@ -4240,3 +4240,200 @@ img {
   .trade-product-image { aspect-ratio: 4 / 5 !important; }
   .product-uses ul { grid-template-columns: 1fr; gap: 10px; }
 }
+
+/* =========================================
+   COMPACT, CONSISTENT SITE RHYTHM
+========================================= */
+
+/* Keep photographs as considered cards throughout the experience. */
+.jps-intro-visual,
+.trade-product-image,
+.spices-story-image,
+.medical-story-image,
+.jps-page-hero > img,
+.jps-page-hero > video,
+.jps-product-image,
+.category-card-image,
+.catalogue-card-image,
+.turmeric-media img {
+  border-radius: 22px !important;
+}
+
+.jps-intro-visual,
+.trade-product-image,
+.spices-story-image,
+.medical-story-image,
+.jps-product-image,
+.category-card-image,
+.catalogue-card-image,
+.turmeric-media {
+  overflow: hidden;
+}
+
+/* Homepage hero */
+@media (min-width: 801px) {
+  .jps-intro {
+    height: 94svh !important;
+    min-height: 680px !important;
+  }
+
+  .jps-intro-sticky { padding: 26px 42px 62px; }
+  .jps-intro-content { padding-top: 45px; }
+  .jps-intro-content h1 { font-size: clamp(58px, 7vw, 104px); }
+  .jps-intro-content p { margin-top: 20px; font-size: 15px; }
+  .jps-intro-visual { width: min(780px, 70vw); height: min(370px, 40vh); margin-top: 36px; }
+}
+
+/* Homepage sections */
+.trade-focus { padding: 88px 42px 96px; }
+.trade-focus-intro { max-width: 1180px; margin-bottom: 54px; }
+.trade-focus-label,
+.spices-story-label,
+.medical-story-label,
+.trade-process-label,
+.about-story-label,
+.enquiry-label { margin-bottom: 18px; }
+.trade-focus-intro h2,
+.spices-story-header h2,
+.medical-story-header h2,
+.trade-process-top h2,
+.about-story-header h2 { font-size: clamp(50px, 6vw, 86px); }
+.trade-focus-intro p { margin-top: 26px; font-size: 16px; }
+.trade-focus-products { max-width: 1180px; gap: 24px; }
+.trade-product-image { aspect-ratio: 1.2 / 1 !important; }
+
+.spices-story,
+.medical-story,
+.trade-process { padding: 100px 42px 108px; }
+.about-story { padding: 100px 42px 96px; }
+.spices-story-header,
+.medical-story-header,
+.about-story-header { max-width: 1180px; margin-bottom: 54px; }
+.spices-story-main,
+.medical-story-main,
+.about-story-grid,
+.trade-process-top,
+.trade-process-intro,
+.trade-process-list,
+.about-story-bottom { max-width: 1180px; }
+.spices-story-main,
+.medical-story-main { gap: 52px; }
+.spices-story-image,
+.medical-story-image { height: 520px; border-radius: 22px; }
+.spices-story-copy,
+.medical-story-copy { padding-bottom: 0; }
+.spices-story-description,
+.medical-story-description { margin-bottom: 36px; font-size: 16px; }
+.spices-list-item { min-height: 64px; }
+.spices-list-item strong { font-size: 22px; }
+.medical-list-item { min-height: 58px; }
+.medical-list-item strong { font-size: 20px; }
+.spices-story-image-caption,
+.medical-story-caption { left: 18px; right: 18px; bottom: 18px; }
+.spices-story-round-arrow,
+.medical-story-arrow { width: 42px; height: 42px; }
+
+.trade-process-intro { margin: 54px auto 58px; gap: 40px; }
+.trade-process-intro p { font-size: 16px; }
+.trade-process-arrow { width: 54px; height: 54px; }
+.trade-process-step { min-height: 124px; grid-template-columns: 60px .8fr 1fr 20px; gap: 28px; }
+.trade-process-step h3 { font-size: clamp(31px, 3vw, 46px); }
+.trade-process-step p { font-size: 14px; }
+
+.about-story-grid { gap: 70px; }
+.about-story-statement > p { font-size: 20px; }
+.about-story-link { margin-top: 32px; }
+.about-detail { padding: 23px 0; }
+.about-detail strong { font-size: 25px; }
+.about-story-bottom { margin-top: 78px; gap: 50px; }
+
+.enquiry { padding: 88px 42px 76px; }
+.enquiry-main { max-width: 1180px; gap: 68px; }
+.enquiry-heading h2 { font-size: clamp(54px, 6vw, 88px); }
+.enquiry-heading p { margin-top: 30px; font-size: 16px; }
+.enquiry-form { padding: 28px; border-radius: 22px; }
+.enquiry-form label { margin-bottom: 18px; }
+.enquiry-bottom { max-width: 1180px; margin-top: 52px; }
+
+/* Catalogue and interior-page spacing */
+.navbar-inner { width: min(1180px, calc(100% - 64px)); height: 72px; }
+.jps-page-hero { min-height: 520px; grid-template-columns: minmax(0, 1fr) minmax(360px, .9fr); }
+.jps-page-hero > div { width: min(500px, 100%); padding: 56px 52px 56px 30px; }
+.jps-page-hero h1,
+.jps-contact-heading h1 { margin: 16px 0 18px; font-size: clamp(48px, 5.5vw, 76px); }
+.jps-page-hero p,
+.jps-contact-heading p { font-size: 15px; line-height: 1.6; }
+.jps-page-hero > video,
+.jps-page-hero > img { min-height: 520px; }
+.jps-page-button { margin-top: 14px; padding: 13px 16px; }
+.jps-page-section { width: min(1180px, calc(100% - 64px)); padding: 78px 0; }
+.jps-page-heading h2 { margin-top: 14px; font-size: clamp(42px, 4.6vw, 66px); }
+.category-grid,
+.catalogue-grid { gap: 42px 24px; margin-top: 40px; }
+.category-card-image { height: 290px; }
+.catalogue-card-image { height: 330px; }
+.category-card > p,
+.catalogue-card > p { margin: 13px 0 6px; }
+.category-card h3,
+.catalogue-card h3 { font-size: clamp(27px, 2.4vw, 35px); }
+.catalogue-card-line { margin-top: 16px; }
+.product-detail-body { padding-bottom: 56px; }
+.product-detail-copy { max-width: 620px; }
+.product-detail-copy > p { font-size: 16px; line-height: 1.65; }
+.product-uses { margin-top: 24px; padding: 18px; }
+.product-uses ul { gap: 12px 16px; margin-top: 14px; }
+.product-facts { margin-top: 26px; }
+.catalogue-next { padding: 52px max(7vw, 30px); }
+.catalogue-next h2 { font-size: clamp(36px, 4vw, 56px); }
+
+.jps-timeline { padding: 72px max(32px, calc((100% - 1180px) / 2)); }
+.jps-document-note { gap: 48px; padding: 52px max(32px, calc((100% - 1180px) / 2)); }
+.jps-contact-heading { padding: 78px max(32px, calc((100% - 1180px) / 2)); }
+
+@media (max-width: 800px) {
+  .jps-intro-sticky { padding: 22px 20px 40px; }
+  .jps-intro-content { padding-top: 48px; }
+  .jps-intro-content h1 { font-size: clamp(48px, 14vw, 70px); }
+  .jps-intro-visual { height: 300px; margin-top: 28px; border-radius: 20px !important; }
+  .trade-focus,
+  .spices-story,
+  .medical-story,
+  .trade-process,
+  .about-story,
+  .enquiry { padding: 70px 20px; }
+  .trade-focus-intro,
+  .spices-story-header,
+  .medical-story-header,
+  .about-story-header { margin-bottom: 38px; }
+  .trade-focus-intro h2,
+  .spices-story-header h2,
+  .medical-story-header h2,
+  .trade-process-top h2,
+  .about-story-header h2 { font-size: clamp(42px, 12vw, 58px); }
+  .trade-focus-products { gap: 18px; }
+  .trade-product-image { aspect-ratio: 1.12 / 1 !important; }
+  .spices-story-main,
+  .medical-story-main { gap: 30px; }
+  .spices-story-image,
+  .medical-story-image { height: 360px; }
+  .spices-story-copy { padding-top: 30px; }
+  .medical-story-main { flex-direction: column-reverse; }
+  .trade-process-intro { margin: 36px auto 42px; }
+  .trade-process-step { min-height: 0; padding: 22px 0; }
+  .about-story-grid { gap: 42px; }
+  .about-story-details { margin-top: 42px; }
+  .about-story-bottom { margin-top: 52px; }
+  .enquiry-main { gap: 42px; }
+  .enquiry-form { padding: 22px; }
+  .navbar-inner { width: calc(100% - 32px); height: 66px; }
+  .jps-page-hero > div { width: min(100% - 40px, 620px); padding: 52px 0 42px; }
+  .jps-page-hero > video,
+  .jps-page-hero > img { width: calc(100% - 40px); height: 300px; min-height: 0; margin: 0 auto 20px; }
+  .jps-page-section { width: min(100% - 40px, 1180px); padding: 60px 0; }
+  .category-grid,
+  .catalogue-grid { gap: 34px; margin-top: 30px; }
+  .category-card-image,
+  .catalogue-card-image { height: min(330px, 88vw); }
+  .catalogue-next { padding: 42px 20px; }
+  .jps-contact-heading { padding: 62px 20px; }
+}

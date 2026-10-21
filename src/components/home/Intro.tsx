@@ -101,16 +101,10 @@ export default function Intro() {
             y: imageY,
           }}
         >
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/raw/WhatsApp%20Image%202026-10-13%20at%203.08.32%20PM.jpeg"
-            aria-label="Turmeric packed for dispatch"
-          >
-            <source src="/raw/IMG_5386.MOV.mp4" type="video/mp4" />
-          </video>
+          <img
+            src="/images/company/trade-hero.png"
+            alt="Global trade logistics at a cargo terminal"
+          />
 
           <Link href="/products" className="jps-intro-pill">
             <span>Explore our products</span>

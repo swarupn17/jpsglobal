@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
+import Link from "next/link";
 
 const spices = [
-  "Turmeric",
-  "Red Chilli",
-  "Cumin",
-  "Ginger",
-  "Other Spices",
+  { name: "Turmeric", slug: "turmeric" },
+  { name: "Red Chilli", slug: "red-chilli" },
+  { name: "Cumin", slug: "cumin" },
+  { name: "Ginger", slug: "ginger" },
 ];
 
 export default function SpicesStory() {
@@ -35,7 +35,7 @@ export default function SpicesStory() {
             ease: [0.16, 1, 0.3, 1],
           }}
         >
-          From Indian soil
+          From Indian fields
           <br />
           to global tables.
         </motion.h2>
@@ -63,10 +63,7 @@ export default function SpicesStory() {
             ease: [0.16, 1, 0.3, 1],
           }}
         >
-          <img
-            src="/images/company/hero-trade.png"
-            alt="Indian spices prepared for international trade"
-          />
+          <Link href="/products/spices"><img src="/images/products/spices-collection.png" alt="Turmeric, red chilli, cumin and ginger" /></Link>
 
           <div className="spices-story-image-caption">
             <span>INDIAN SPICES</span>
@@ -100,25 +97,26 @@ export default function SpicesStory() {
         >
 
           <p className="spices-story-description">
-            JPS Global Trade works with a focused range of
-            Indian spices for businesses seeking dependable
-            sourcing and international trade opportunities.
+            JPS Global Trade works with a focused selection of
+            Indian agricultural products for buyers seeking
+            dependable sourcing and global opportunities.
           </p>
 
           <div className="spices-list">
             {spices.map((spice, index) => (
-              <div
+              <Link
                 className="spices-list-item"
-                key={spice}
+                href={`/products/spices/${spice.slug}`}
+                key={spice.slug}
               >
                 <span>
                   0{index + 1}
                 </span>
 
                 <strong>
-                  {spice}
+                  {spice.name}
                 </strong>
-              </div>
+              </Link>
             ))}
           </div>
 

@@ -49,10 +49,10 @@ export default function AboutStory() {
           }}
         >
           <p>
-            JPS Global Trade is focused on domestic
-            trade and import-export operations, connecting
-            products, sourcing opportunities, and
-            businesses across borders.
+            Established in 2024, JPS Global Trade is a
+            merchant export company in Nanded, India,
+            connecting Indian products and businesses
+            across global markets.
           </p>
 
           <a
@@ -83,12 +83,11 @@ export default function AboutStory() {
             <span>01</span>
 
             <div>
-              <strong>International Business</strong>
+              <strong>Registered for Trade</strong>
 
               <p>
-                Business knowledge shaped around
-                export, import, sourcing, and
-                cross-border trade.
+                Registered under MSME and the Maharashtra
+                Chamber of Commerce.
               </p>
             </div>
           </div>
@@ -98,12 +97,11 @@ export default function AboutStory() {
             <span>02</span>
 
             <div>
-              <strong>Trade Expertise</strong>
+              <strong>Import–Export Focus</strong>
 
               <p>
-                A practical understanding of domestic
-                trade and the processes involved in
-                international business.
+                A practical understanding of sourcing,
+                documentation, and international trade.
               </p>
             </div>
           </div>
@@ -113,12 +111,11 @@ export default function AboutStory() {
             <span>03</span>
 
             <div>
-              <strong>Business Relationships</strong>
+              <strong>Global Partnerships</strong>
 
               <p>
-                A focus on building collaborative
-                relationships around long-term
-                business opportunities.
+                A relationship-led approach to building
+                long-term business opportunities.
               </p>
             </div>
           </div>
@@ -148,7 +145,7 @@ export default function AboutStory() {
             <span>BASED IN</span>
 
             <strong>
-              Maharashtra, India
+              Nanded, Maharashtra
             </strong>
           </div>
         </motion.div>

@@ -3,6 +3,7 @@
 import { Merriweather } from "next/font/google";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { useRef, useState } from "react";
 import MenuOverlay from "@/components/layout/MenuOverlay";
 
@@ -100,18 +101,24 @@ export default function Intro() {
             y: imageY,
           }}
         >
-          <img
-            src="/images/company/hero-trade.png"
-            alt="JPS Global Trade connecting Indian products with international markets"
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/raw/WhatsApp%20Image%202026-10-13%20at%203.08.32%20PM.jpeg"
+            aria-label="Turmeric packed for dispatch"
+          >
+            <source src="/raw/IMG_5386.MOV.mp4" type="video/mp4" />
+          </video>
 
-          <div className="jps-intro-pill">
+          <Link href="/products" className="jps-intro-pill">
             <span>Explore our products</span>
 
             <span className="jps-arrow">
               <ArrowRight size={19} />
             </span>
-          </div>
+          </Link>
         </motion.div>
 
         <div className="jps-intro-scroll">

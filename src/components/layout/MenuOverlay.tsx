@@ -13,27 +13,27 @@ const links = [
   {
     number: "01",
     label: "Home",
-    href: "#top",
+    href: "/",
   },
   {
     number: "02",
-    label: "Spices",
-    href: "#spices",
+    label: "Products",
+    href: "/products",
   },
   {
     number: "03",
     label: "Medical Devices",
-    href: "#medical",
+    href: "/products/medical-devices",
   },
   {
     number: "04",
     label: "About JPS",
-    href: "#about",
+    href: "/about",
   },
   {
     number: "05",
     label: "Contact",
-    href: "#contact",
+    href: "/contact",
   },
 ];
 

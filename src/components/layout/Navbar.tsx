@@ -16,10 +16,10 @@ const merriweather = Merriweather({
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Products", href: "#products" },
-  { label: "About Us", href: "#about" },
-  { label: "Certifications", href: "#certifications" },
-  { label: "Contact", href: "#contact" },
+  { label: "Products", href: "/products" },
+  { label: "About Us", href: "/about" },
+  { label: "Certifications", href: "/certifications" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -50,7 +50,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <Link href="#contact" className="navbar-enquire">
+        <Link href="/contact" className="navbar-enquire">
           <span>Enquire Now</span>
           <ArrowUpRight size={18} strokeWidth={2} />
         </Link>
@@ -84,7 +84,7 @@ export default function Navbar() {
             ))}
 
             <Link
-              href="#contact"
+              href="/contact"
               className="navbar-mobile-enquire"
               onClick={() => setOpen(false)}
             >
@@ -97,4 +97,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

@@ -2,23 +2,26 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const products = [
   {
     number: "01",
-    title: "Spices",
+    title: "Indian Spices",
     description:
-      "Indian spices sourced for businesses that value consistency, quality, and dependable trade.",
-    image: "/images/company/hero-trade.png",
-    position: "center left",
+      "Turmeric, red chilli, cumin and ginger selected for clear global sourcing conversations.",
+    image: "/images/products/spices-collection.png",
+    position: "center",
+    href: "/products/spices",
   },
   {
     number: "02",
     title: "Medical Devices",
     description:
-      "Essential medical devices selected for reliable sourcing and international business requirements.",
-    image: "/images/company/hero-trade.png",
-    position: "center right",
+      "Medical-device sourcing for international buyers seeking quality, documentation and clear communication.",
+    image: "/images/products/medical-devices.png",
+    position: "center",
+    href: "/products/medical-devices",
   },
 ];
 
@@ -93,7 +96,7 @@ export default function TradeFocus() {
             }}
           >
 
-            <div className="trade-product-image">
+            <Link href={product.href} className="trade-product-image">
               <img
                 src={product.image}
                 alt={product.title}
@@ -117,7 +120,7 @@ export default function TradeFocus() {
 
                 <p>{product.description}</p>
               </div>
-            </div>
+            </Link>
 
           </motion.article>
         ))}

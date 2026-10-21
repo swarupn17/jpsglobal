@@ -2,8 +2,24 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { FormEvent, useState } from "react";
 
 export default function Enquiry() {
+  const [formFeedback, setFormFeedback] = useState("");
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const fields = new FormData(event.currentTarget);
+    const subject = encodeURIComponent(`Website enquiry: ${fields.get("interest")}`);
+    const body = encodeURIComponent(
+      `Name: ${fields.get("name")}\nEmail: ${fields.get("email")}\nInterest: ${fields.get("interest")}\n\nRequirement:\n${fields.get("message")}`
+    );
+
+    window.location.href = `mailto:info@jpsglobaltrade.com?subject=${subject}&body=${body}`;
+    setFormFeedback("Your email app is opening with the enquiry prepared.");
+  }
+
   return (
     <section id="contact" className="enquiry">
 
@@ -48,7 +64,7 @@ export default function Enquiry() {
             delay: 0.1,
             ease: [0.16, 1, 0.3, 1],
           }}
-          onSubmit={(event) => event.preventDefault()}
+          onSubmit={handleSubmit}
         >
 
           <label>
@@ -58,6 +74,7 @@ export default function Enquiry() {
               type="text"
               name="name"
               placeholder="Enter your name"
+              required
             />
           </label>
 
@@ -69,6 +86,7 @@ export default function Enquiry() {
               type="email"
               name="email"
               placeholder="you@company.com"
+              required
             />
           </label>
 
@@ -76,7 +94,7 @@ export default function Enquiry() {
           <label>
             <span>What are you looking for?</span>
 
-            <select name="interest" defaultValue="">
+            <select name="interest" defaultValue="" required>
               <option value="" disabled>
                 Select an area
               </option>
@@ -107,6 +125,7 @@ export default function Enquiry() {
               name="message"
               rows={3}
               placeholder="Tell us about your requirement..."
+              required
             />
           </label>
 
@@ -122,6 +141,12 @@ export default function Enquiry() {
             </span>
           </button>
 
+          {formFeedback && (
+            <p className="enquiry-form-feedback" role="status">
+              {formFeedback}
+            </p>
+          )}
+
         </motion.form>
 
       </div>
@@ -131,14 +156,14 @@ export default function Enquiry() {
 
         <div className="enquiry-contact-list">
 
-          <a href="mailto:jpsglobaltrade@gmail.com">
+          <a href="mailto:info@jpsglobaltrade.com">
             <span>EMAIL</span>
-            <strong>jpsglobaltrade@gmail.com</strong>
+            <strong>info@jpsglobaltrade.com</strong>
           </a>
 
-          <a href="tel:+917588666665">
+          <a href="tel:+917588665655">
             <span>PHONE</span>
-            <strong>+91 7588666665</strong>
+            <strong>+91 7588665655</strong>
           </a>
 
         </div>

@@ -2,14 +2,15 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const devices = [
-  "Pulse Oximeters",
-  "Digital Thermometers",
-  "Blood Pressure Monitors",
-  "Glucometers",
-  "Compact Nebuliser",
-  "Stethoscopes",
+  { name: "Pulse Oximeters", slug: "pulse-oximeter" },
+  { name: "Digital Thermometers", slug: "digital-thermometer" },
+  { name: "Blood Pressure Monitors", slug: "blood-pressure-monitor" },
+  { name: "Glucometers", slug: "glucometer" },
+  { name: "Compact Nebuliser", slug: "nebulizer" },
+  { name: "Stethoscopes", slug: "stethoscope" },
 ];
 
 export default function MedicalStory() {
@@ -62,20 +63,21 @@ export default function MedicalStory() {
 
           <div className="medical-list">
             {devices.map((device, index) => (
-              <div
+              <Link
                 className="medical-list-item"
-                key={device}
+                href={`/products/medical-devices/${device.slug}`}
+                key={device.slug}
               >
                 <span>
                   0{index + 1}
                 </span>
 
                 <strong>
-                  {device}
+                  {device.name}
                 </strong>
 
                 <ArrowUpRight size={18} />
-              </div>
+              </Link>
             ))}
           </div>
         </motion.div>
@@ -99,10 +101,7 @@ export default function MedicalStory() {
             ease: [0.16, 1, 0.3, 1],
           }}
         >
-          <img
-            src="/images/company/hero-trade.png"
-            alt="Medical devices for international trade"
-          />
+          <Link href="/products/medical-devices"><img src="/images/products/medical-devices.png" alt="Medical devices for international trade" /></Link>
 
           <div className="medical-story-caption">
             <span>MEDICAL DEVICES</span>

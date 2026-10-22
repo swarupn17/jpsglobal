@@ -1,17 +1,10 @@
 "use client";
 
-import { Merriweather } from "next/font/google";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import MenuOverlay from "@/components/layout/MenuOverlay";
-
-const merriweather = Merriweather({
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
 
 export default function Intro() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -58,9 +51,6 @@ export default function Intro() {
               alt="JPS Global Trade"
             />
 
-            <span className={merriweather.className}>
-              JPS Global Trade
-            </span>
           </div>
 
           <button

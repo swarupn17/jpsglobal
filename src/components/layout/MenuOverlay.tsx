@@ -78,10 +78,6 @@ export default function MenuOverlay({
                   src="/images/company/logo.png"
                   alt="JPS Global Trade"
                 />
-
-                <span>
-                  JPS GLOBAL TRADE
-                </span>
               </div>
 
               <button

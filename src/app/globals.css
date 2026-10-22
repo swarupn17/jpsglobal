@@ -4437,3 +4437,213 @@ img {
   .catalogue-next { padding: 42px 20px; }
   .jps-contact-heading { padding: 62px 20px; }
 }
+
+/* PDF edit pass: compact the navigation and balance the editorial sections. */
+.jps-menu-overlay {
+  background: transparent;
+  pointer-events: none;
+}
+
+.jps-menu-panel {
+  position: fixed;
+  inset: 18px 18px auto auto;
+  width: min(440px, calc(100vw - 36px));
+  min-height: 0;
+  max-height: calc(100svh - 36px);
+  padding: 20px 22px 18px;
+  border-radius: 22px;
+  box-shadow: 0 24px 70px rgba(7, 21, 47, 0.26);
+  pointer-events: auto;
+}
+
+.jps-menu-brand img {
+  width: 42px;
+  height: 42px;
+}
+
+.jps-menu-close {
+  min-width: 86px;
+  height: 42px;
+  padding: 4px 5px 4px 15px;
+  font-size: 12px;
+}
+
+.jps-menu-close-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.jps-menu-content {
+  width: 100%;
+  margin: 22px 0 0;
+}
+
+.jps-menu-eyebrow {
+  margin-bottom: 12px;
+}
+
+.jps-menu-link {
+  min-height: 62px;
+  grid-template-columns: 32px 1fr 36px;
+  gap: 12px;
+}
+
+.jps-menu-link-name {
+  font-size: clamp(25px, 5vw, 36px);
+}
+
+.jps-menu-link-arrow {
+  width: 34px;
+  height: 34px;
+}
+
+.jps-menu-link-arrow svg {
+  width: 17px;
+  height: 17px;
+}
+
+.jps-menu-footer {
+  display: none;
+}
+
+.trade-focus-intro {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.trade-focus-intro h2 {
+  font-size: clamp(56px, 6.8vw, 96px);
+}
+
+.trade-focus-intro p {
+  margin: 24px auto 0;
+  font-size: 17px;
+}
+
+.spices-story-label,
+.medical-story-label {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+
+.spices-story-description,
+.medical-story-description {
+  max-width: 480px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.medical-story-header h2 {
+  max-width: none;
+  font-size: clamp(56px, 6.8vw, 96px);
+}
+
+.trade-process-summary {
+  width: min(1180px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(290px, 0.75fr);
+  align-items: end;
+  gap: clamp(40px, 7vw, 110px);
+  margin: 0 auto 56px;
+}
+
+.trade-process-top,
+.trade-process-intro {
+  width: auto;
+  max-width: none;
+  margin: 0;
+}
+
+.trade-process-intro {
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.trade-process-list {
+  margin-top: 0;
+}
+
+.about-story-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.7fr);
+  align-items: end;
+  gap: clamp(40px, 8vw, 120px);
+  margin-bottom: 64px;
+}
+
+.about-story-header .about-story-statement {
+  padding: 0 0 4px;
+}
+
+.about-story-details {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.about-detail {
+  grid-template-columns: 60px minmax(220px, 0.65fr) minmax(280px, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.about-detail > div {
+  display: contents;
+}
+
+.about-detail p {
+  margin: 4px 0 0;
+  max-width: 460px;
+}
+
+.enquiry-main {
+  align-items: center;
+}
+
+.enquiry-heading {
+  padding-top: 0;
+}
+
+.enquiry-heading p {
+  margin-top: 26px;
+}
+
+@media (max-width: 800px) {
+  .jps-menu-panel {
+    inset: 12px 12px auto auto;
+    width: min(390px, calc(100vw - 24px));
+    max-height: calc(100svh - 24px);
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .jps-menu-content { margin-top: 16px; }
+  .jps-menu-link { min-height: 56px; }
+  .jps-menu-link-name { font-size: 26px; }
+
+  .trade-focus-intro h2,
+  .medical-story-header h2 { font-size: clamp(46px, 12vw, 64px); }
+  .trade-focus-intro p,
+  .spices-story-description,
+  .medical-story-description { font-size: 16px; }
+
+  .trade-process-summary,
+  .about-story-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 34px;
+    margin-bottom: 42px;
+  }
+
+  .trade-process-intro {
+    align-items: flex-start;
+  }
+
+  .about-detail {
+    grid-template-columns: 34px 1fr;
+    gap: 10px 16px;
+  }
+
+  .about-detail > div { display: block; }
+  .about-detail p { margin-top: 8px; }
+}

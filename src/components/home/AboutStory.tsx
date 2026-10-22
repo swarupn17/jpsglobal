@@ -9,34 +9,31 @@ export default function AboutStory() {
 
       <div className="about-story-header">
 
-        <motion.span
-          className="about-story-label"
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.7 }}
-        >
-          ABOUT JPS
-        </motion.span>
+        <div className="about-story-title">
+          <motion.span
+            className="about-story-label"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.7 }}
+          >
+            ABOUT JPS
+          </motion.span>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{
-            duration: 1,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        >
-          Built in India.
-          <br />
-          Looking outward.
-        </motion.h2>
-
-      </div>
-
-
-      <div className="about-story-grid">
+          <motion.h2
+            initial={{ opacity: 0, y: 70 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{
+              duration: 1,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+          >
+            Built in India.
+            <br />
+            Looking outward.
+          </motion.h2>
+        </div>
 
         <motion.div
           className="about-story-statement"
@@ -65,19 +62,20 @@ export default function AboutStory() {
             </span>
           </a>
         </motion.div>
+      </div>
 
 
-        <motion.div
-          className="about-story-details"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{
-            duration: 0.9,
-            delay: 0.12,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        >
+      <motion.div
+        className="about-story-details"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{
+          duration: 0.9,
+          delay: 0.12,
+          ease: [0.16, 1, 0.3, 1],
+        }}
+      >
 
           <div className="about-detail">
             <span>01</span>
@@ -120,54 +118,7 @@ export default function AboutStory() {
             </div>
           </div>
 
-        </motion.div>
-
-      </div>
-
-
-      <div className="about-story-bottom">
-
-        <motion.div
-          className="about-story-location"
-          initial={{ opacity: 0, scale: 0.96 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{
-            duration: 1,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        >
-          <div className="about-location-mark">
-            IN
-          </div>
-
-          <div>
-            <span>BASED IN</span>
-
-            <strong>
-              Nanded, Maharashtra
-            </strong>
-          </div>
-        </motion.div>
-
-
-        <motion.div
-          className="about-story-education"
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <span>BACKGROUND</span>
-
-          <p>
-            BBA in International Business and
-            postgraduate education in Export and
-            Import Management.
-          </p>
-        </motion.div>
-
-      </div>
+      </motion.div>
 
     </section>
   );

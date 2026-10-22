@@ -6,13 +6,6 @@ import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Merriweather } from "next/font/google";
-
-const merriweather = Merriweather({
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -37,9 +30,6 @@ export default function Navbar() {
             priority
           />
 
-          <span className={`navbar-brand ${merriweather.className}`}>
-            JPS Global Trade
-          </span>
         </Link>
 
         <div className="navbar-links">

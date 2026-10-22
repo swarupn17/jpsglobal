@@ -30,6 +30,8 @@ export default function TradeProcess() {
   return (
     <section className="trade-process">
 
+      <div className="trade-process-summary">
+
       <div className="trade-process-top">
 
         <motion.span
@@ -88,6 +90,8 @@ export default function TradeProcess() {
         >
           <ArrowDown size={28} />
         </motion.div>
+
+      </div>
 
       </div>
 

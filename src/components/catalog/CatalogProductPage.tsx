@@ -18,7 +18,7 @@ export default function CatalogProductPage({ product }: { product: Product }) {
       </section>
 
       <section className="jps-page-section product-detail-body">
-        <div className="jps-page-heading"><span>PRODUCT OVERVIEW</span><h2>Clear details<br />for buyers.</h2></div>
+        <div className="jps-page-heading"><span>PRODUCT OVERVIEW</span><h2>Clear details for buyers.</h2></div>
         <div className="product-detail-copy">
           <p>{product.overview}</p>
           {product.isMedical && <p className="product-safety-note">This is a sourcing page, not clinical or regulatory guidance. Product availability, certification status and regulatory suitability are confirmed for each buyer enquiry.</p>}
@@ -34,7 +34,7 @@ export default function CatalogProductPage({ product }: { product: Product }) {
       </section>
 
       <section className="catalogue-next">
-        <div><span>HAVE A SPECIFIC REQUIREMENT?</span><h2>Let&apos;s start with<br />the details.</h2></div>
+        <div><span>HAVE A SPECIFIC REQUIREMENT?</span><h2>Let&apos;s start with the details.</h2></div>
         <Link href="/contact" className="jps-page-button">Discuss your requirement <b>↗</b></Link>
       </section>
     </PageFrame>

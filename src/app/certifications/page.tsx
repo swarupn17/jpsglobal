@@ -1,3 +1,23 @@
 import PageFrame from "@/components/PageFrame";
-const credentials = [{mark:"MSME",title:"MSME Registration",copy:"Registered as a micro, small and medium enterprise in India."},{mark:"GST",title:"GST Registration",copy:"Registered for Goods and Services Tax."},{mark:"APEDA",title:"APEDA",copy:"Associated with the Agricultural and Processed Food Products Export Development Authority."},{mark:"IEC",title:"DGFT / IEC",copy:"Import Export Code issued through the Directorate General of Foreign Trade."}];
-export default function CertificationsPage() { return <PageFrame><section className="jps-page-hero credentials-hero"><div><span>CREDENTIALS</span><h1>Prepared for<br />international trade.</h1><p>Our credentials support clear, confident business conversations with global buyers and partners.</p></div><video autoPlay muted loop playsInline aria-label="Export logistics"><source src="/raw/IMG_5386.MOV.mp4" type="video/mp4" /></video></section><section className="jps-credentials">{credentials.map((item) => <article key={item.mark}><span>{item.mark}</span><h2>{item.title}</h2><p>{item.copy}</p></article>)}</section><section className="jps-document-note"><span>DOCUMENTATION</span><p>Specific product documentation and applicable requirements are discussed against the destination market and buyer requirement.</p></section></PageFrame>; }
+
+const certificationMarks = [
+  { src: "/images/company/certificate-msme.png", alt: "MSME mark" },
+  { src: "/images/company/certificate-gst.png", alt: "GST mark" },
+  { src: "/images/company/certificate-apeda.jpg", alt: "APEDA mark" },
+  { src: "/images/company/certificate-dgft.jpg", alt: "Directorate General of Foreign Trade mark" },
+];
+
+export default function CertificationsPage() {
+  return <PageFrame>
+    <section className="certificate-showcase" aria-label="Certifications">
+      <h1>Certifications</h1>
+      <div className="certificate-logo-grid">
+        {certificationMarks.map((mark) => (
+          <div className="certificate-logo-card" key={mark.src}>
+            <img src={mark.src} alt={mark.alt} />
+          </div>
+        ))}
+      </div>
+    </section>
+  </PageFrame>;
+}

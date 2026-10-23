@@ -1,4 +1,4 @@
-export type CategorySlug = "spices" | "agricultural-products" | "medical-devices";
+export type CategorySlug = "spices" | "medical-devices";
 
 export type Product = {
   slug: string;
@@ -18,24 +18,16 @@ export type Product = {
 
 export const categories: Record<CategorySlug, { label: string; number: string; title: string; description: string; image: string; imageAlt: string }> = {
   spices: {
-    label: "SPICES",
+    label: "SPICES & PRODUCE",
     number: "01",
-    title: "Indian spices,\npresented with care.",
-    description: "Explore a focused range of whole and processed spice products for buyer-led sourcing conversations.",
+    title: "Indian spices and produce,\npresented with care.",
+    description: "Explore a focused range of spices and Indian produce for buyer-led sourcing conversations.",
     image: "/images/products/spices-collection.png",
     imageAlt: "Turmeric, red chilli, cumin and ginger",
   },
-  "agricultural-products": {
-    label: "AGRICULTURAL PRODUCTS",
-    number: "02",
-    title: "Fresh and plant-based\nproducts from India.",
-    description: "Explore produce and plant-based product enquiries, with specifications and packing discussed for each destination market.",
-    image: "/images/products/banana.png",
-    imageAlt: "Fresh bananas",
-  },
   "medical-devices": {
     label: "MEDICAL DEVICES",
-    number: "03",
+    number: "02",
     title: "Healthcare supply,\nbeyond borders.",
     description: "Explore a focused range of device categories for international sourcing requirements.",
     image: "/images/products/medical-devices.png",
@@ -102,8 +94,8 @@ export const products: Product[] = [
   },
   {
     slug: "banana",
-    category: "agricultural-products",
-    number: "01",
+    category: "spices",
+    number: "05",
     title: "Banana",
     botanicalName: "Musa spp.",
     shortDescription: "Fresh banana sourcing discussions tailored to buyer and shipment requirements.",
@@ -116,8 +108,8 @@ export const products: Product[] = [
   },
   {
     slug: "moringa",
-    category: "agricultural-products",
-    number: "02",
+    category: "spices",
+    number: "06",
     title: "Moringa",
     botanicalName: "Moringa oleifera",
     shortDescription: "Moringa leaf and powder product enquiries for global buyers.",

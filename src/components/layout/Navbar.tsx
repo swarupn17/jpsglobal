@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -17,6 +18,11 @@ const navItems = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  function isActive(href: string) {
+    return href === "/" ? pathname === href : pathname === href || pathname.startsWith(`${href}/`);
+  }
 
   return (
     <nav className="navbar">
@@ -34,7 +40,7 @@ export default function Navbar() {
 
         <div className="navbar-links">
           {navItems.map((item) => (
-            <Link key={item.label} href={item.href}>
+            <Link key={item.label} href={item.href} className={isActive(item.href) ? "is-active" : undefined}>
               {item.label}
             </Link>
           ))}
@@ -67,6 +73,7 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
+                className={isActive(item.href) ? "is-active" : undefined}
                 onClick={() => setOpen(false)}
               >
                 {item.label}

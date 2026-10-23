@@ -1,6 +1,6 @@
-import Link from "next/link";
 import PageFrame from "@/components/PageFrame";
 import { CategorySlug, categories, getProductsForCategory } from "@/lib/product-catalog";
+import ProductSlider from "@/components/catalog/ProductSlider";
 
 export default function CatalogCategoryPage({ category }: { category: CategorySlug }) {
   const details = categories[category];
@@ -19,21 +19,8 @@ export default function CatalogCategoryPage({ category }: { category: CategorySl
       </section>
 
       <section id="catalogue" className="jps-page-section catalogue-section">
-        <div className="jps-page-heading"><span>EXPLORE THE RANGE</span><h2>Find the right<br />product detail.</h2></div>
-        <div className="catalogue-grid">
-          {products.map((product) => (
-            <article className="catalogue-card" key={product.slug}>
-              <Link href={`/products/${product.category}/${product.slug}`} className="catalogue-card-image">
-                <img src={product.image} alt={product.imageAlt} />
-                <span>{product.number}</span><b>↗</b>
-              </Link>
-              <p>{product.botanicalName ?? "Medical device category"}</p>
-              <h3>{product.title}</h3>
-              <div className="catalogue-card-line" />
-              <Link href={`/products/${product.category}/${product.slug}`}>View product detail <b>↗</b></Link>
-            </article>
-          ))}
-        </div>
+        <div className="jps-page-heading"><span>EXPLORE THE RANGE</span><h2>Find the right product detail.</h2></div>
+        <ProductSlider products={products} />
       </section>
     </PageFrame>
   );

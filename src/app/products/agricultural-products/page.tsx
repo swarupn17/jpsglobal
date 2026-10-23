@@ -1,2 +1,5 @@
-import CatalogCategoryPage from "@/components/catalog/CatalogCategoryPage";
-export default function AgriculturalProductsPage() { return <CatalogCategoryPage category="agricultural-products" />; }
+import { redirect } from "next/navigation";
+
+export default function AgriculturalProductsPage() {
+  redirect("/products/spices");
+}
